@@ -1,0 +1,17 @@
+// Exercise 19 — Customizing Bootstrap with Sass
+// 1. Override Bootstrap's default variables BEFORE importing it.
+$primary:   #1d4e89;   // portal brand blue
+$success:   #2a9d8f;
+$font-family-base: 'Poppins', sans-serif;
+$border-radius: 0.5rem;
+
+// 2. Import all of Bootstrap (pulls in functions, variables, mixins, components).
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// 3. Add your own custom rules on top.
+.event-hero {
+    background: linear-gradient(135deg, $primary, lighten($primary, 20%));
+    color: #fff;
+    padding: 3rem;
+    border-radius: $border-radius;
+}

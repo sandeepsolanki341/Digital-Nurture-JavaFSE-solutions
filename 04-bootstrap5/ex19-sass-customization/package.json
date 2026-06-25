@@ -1,0 +1,13 @@
+{
+  "name": "bootstrap-sass-customization",
+  "version": "1.0.0",
+  "description": "Exercise 19 — customizing Bootstrap 5 via Sass",
+  "scripts": {
+    "css": "sass scss/custom.scss dist/custom.css",
+    "watch": "sass --watch scss/custom.scss dist/custom.css"
+  },
+  "devDependencies": {
+    "bootstrap": "^5.3.3",
+    "sass": "^1.77.0"
+  }
+}

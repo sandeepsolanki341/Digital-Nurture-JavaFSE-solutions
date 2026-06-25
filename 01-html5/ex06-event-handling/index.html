@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Handling</title>
+    <style>img { width: 150px; transition: transform .2s; } .big { transform: scale(1.5); }</style>
+</head>
+<body>
+    <h1>Feedback &amp; Interaction</h1>
+
+    <label>Phone (blur to validate):
+        <input type="text" id="phone" placeholder="10 digits">
+    </label>
+    <span id="phoneMsg"></span>
+
+    <p>
+        <label>Event fee:
+            <select id="feeSelect">
+                <option value="Free">Workshop</option>
+                <option value="$50">Conference</option>
+                <option value="$10">Meetup</option>
+            </select>
+        </label>
+        <span id="feeOut"></span>
+    </p>
+
+    <button id="confirmBtn">Submit</button>
+    <span id="confirmMsg"></span>
+
+    <p>Double-click the image to enlarge:</p>
+    <img id="eventImg" src="https://placehold.co/150" alt="event" ondblclick="this.classList.toggle('big')">
+
+    <p>Feedback (counts characters):</p>
+    <textarea id="feedback" rows="3" cols="40"></textarea>
+    <div>Characters: <span id="charCount">0</span></div>
+
+    <script>
+        phone.onblur = () => {
+            phoneMsg.textContent = /^\d{10}$/.test(phone.value) ? '✓ valid' : '✗ enter 10 digits';
+        };
+        feeSelect.onchange = () => feeOut.textContent = 'Fee: ' + feeSelect.value;
+        confirmBtn.onclick = () => confirmMsg.textContent = ' Submitted!';
+        feedback.addEventListener('keyup', () => charCount.textContent = feedback.value.length);
+    </script>
+</body>
+</html>

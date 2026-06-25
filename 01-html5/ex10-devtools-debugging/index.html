@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DevTools Debugging</title>
+</head>
+<body>
+    <h1>Debugging Practice</h1>
+    <p>Open Chrome DevTools (F12) and use the Console, Elements, and Sources tabs.</p>
+    <button id="logBtn">Log a message</button>
+    <button id="breakBtn">Trigger breakpoint demo</button>
+
+    <script>
+        console.log('Page loaded — check the Console tab.');
+        document.getElementById('logBtn').onclick = () => {
+            console.log('Button clicked at', new Date().toLocaleTimeString());
+            console.table([{event:'Meetup', seats:20}, {event:'Bootcamp', seats:5}]);
+        };
+        document.getElementById('breakBtn').onclick = () => {
+            let counter = 0;
+            for (let i = 0; i < 5; i++) {
+                counter += i;     // set a breakpoint on this line in the Sources tab
+            }
+            console.log('Final counter:', counter);
+        };
+    </script>
+</body>
+</html>

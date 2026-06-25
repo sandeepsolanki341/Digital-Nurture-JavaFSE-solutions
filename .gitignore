@@ -1,0 +1,39 @@
+# ---------- Java ----------
+*.class
+target/
+out/
+bin/
+*.jar
+*.war
+output.txt
+*.log
+hs_err_pid*
+
+# ---------- Node / Bootstrap (Sass) ----------
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+dist/
+.sass-cache/
+*.css.map
+
+# ---------- IDE / Editor ----------
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+.project
+.classpath
+.settings/
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- Env / secrets ----------
+.env
+*.local
+db.properties

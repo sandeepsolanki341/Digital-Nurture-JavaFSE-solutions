@@ -1,0 +1,9 @@
+.responsive-box {
+    background: #1d4e89;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+@media (max-width: 600px) {
+    .responsive-box { background: #e07a5f; padding: 20px; }
+}

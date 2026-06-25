@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Preferences</title>
+</head>
+<body>
+    <h1>Preferred Event Type</h1>
+    <select id="pref">
+        <option value="">-- select --</option>
+        <option>Workshop</option>
+        <option>Conference</option>
+        <option>Meetup</option>
+    </select>
+    <button id="clearBtn">Clear Preferences</button>
+    <p id="status"></p>
+
+    <script>
+        const pref = document.getElementById('pref');
+        // restore saved preference on load
+        const saved = localStorage.getItem('eventType');
+        if (saved) { pref.value = saved; status.textContent = 'Restored: ' + saved; }
+
+        pref.onchange = () => {
+            localStorage.setItem('eventType', pref.value);
+            status.textContent = 'Saved: ' + pref.value;
+        };
+        clearBtn.onclick = () => {
+            localStorage.clear();
+            sessionStorage.clear();
+            pref.value = '';
+            status.textContent = 'Preferences cleared.';
+        };
+    </script>
+</body>
+</html>

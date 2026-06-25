@@ -1,0 +1,7 @@
+.news {
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid gray;
+    max-width: 800px;
+    line-height: 1.6;
+}

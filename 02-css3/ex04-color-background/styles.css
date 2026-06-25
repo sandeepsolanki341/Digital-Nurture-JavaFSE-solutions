@@ -1,0 +1,23 @@
+/* Body: background image with fallback color */
+body {
+    background-color: #eef2f5; /* fallback */
+    background-image: url('https://placehold.co/1200x300?text=Council');
+    background-size: cover;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+/* Gradient section header */
+.section-header {
+    background: linear-gradient(135deg, #1d4e89, #4a90d9);
+    color: #ffffff;            /* HEX text color */
+    padding: 30px;
+}
+
+/* RGBA for a translucent note box */
+.note {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: rgba(20, 20, 20, 0.85);
+    padding: 12px;
+    margin: 16px;
+}

@@ -1,0 +1,18 @@
+.nav { display: flex; gap: 20px; background: #1d4e89; padding: 16px; }
+.nav a { color: #fff; text-decoration: none; }
+
+.grid { display: flex; gap: 16px; padding: 16px; }
+.card {
+    flex: 1;
+    background: #f0f4f8;
+    padding: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Tablet / phone: stack nav and cards vertically, shrink text */
+@media (max-width: 768px) {
+    .nav  { flex-direction: column; gap: 10px; }
+    .grid { flex-direction: column; }
+    .card { padding: 20px; font-size: 1rem; }
+}

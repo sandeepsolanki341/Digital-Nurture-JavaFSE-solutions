@@ -1,0 +1,9 @@
+/* External stylesheet — reusable styles live here */
+
+/* Intro paragraph styles */
+.intro {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+}

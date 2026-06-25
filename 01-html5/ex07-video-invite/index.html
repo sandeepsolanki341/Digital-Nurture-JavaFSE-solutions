@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Promo Video</title>
+</head>
+<body>
+    <h1>Event Promo</h1>
+    <video id="promo" width="480" controls
+           oncanplay="document.getElementById('status').textContent='Video ready to play'">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p id="status"></p>
+
+    <p>(Open the registration page and try leaving — onbeforeunload warns you.)</p>
+    <script>
+        window.addEventListener('beforeunload', function (e) {
+            e.preventDefault();
+            e.returnValue = '';   // triggers the browser's "leave site?" prompt
+        });
+    </script>
+</body>
+</html>

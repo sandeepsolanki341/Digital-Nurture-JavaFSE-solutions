@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Forms</title>
+    <style>.error{color:red;font-size:.85rem} label{display:block;margin-top:10px}</style>
+</head>
+<body>
+    <h1>Event Sign-up</h1>
+    <form id="signup">
+        <label>Name <input name="name"></label>
+        <span class="error" id="nameErr"></span>
+        <label>Email <input name="email"></label>
+        <span class="error" id="emailErr"></span>
+        <label>Event
+            <select name="event"><option>Meetup</option><option>Workshop</option></select>
+        </label>
+        <button type="submit">Sign up</button>
+    </form>
+    <p id="result"></p>
+    <script src="main.js"></script>
+</body>
+</html>

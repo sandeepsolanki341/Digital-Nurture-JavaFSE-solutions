@@ -1,0 +1,17 @@
+.eventCard {
+    border: 2px solid #1d4e89;
+    padding: 16px;
+    margin: 20px;
+    border-radius: 6px;
+    max-width: 400px;
+}
+
+/* Outline highlights a focused form field (does not affect layout) */
+.field { padding: 8px; margin: 20px; }
+.field:focus { outline: 3px solid #e07a5f; }
+
+/* visibility:hidden  -> element hidden but space preserved */
+.hidden-demo { visibility: hidden; }
+
+/* display:none -> element removed from flow entirely */
+.none-demo { display: none; }

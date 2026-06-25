@@ -1,0 +1,15 @@
+/* Link pseudo-classes */
+a:link    { color: #1d4e89; text-decoration: none; }
+a:visited { color: #6a4c93; }
+a:hover   { color: #e07a5f; text-decoration: underline; }
+a:active  { color: #d62828; }
+
+/* Horizontal nav with bullets removed */
+.nav-menu {
+    list-style-type: none;
+    list-style-position: inside;
+    display: flex;
+    gap: 24px;
+    padding: 0;
+}
+.nav-menu li { padding: 8px 4px; margin: 0 4px; }
